@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/styles.css">
+    <title>RocketCard</title>
+</head>
+
+<body>
+    <header>
+        <h1>RocketCard</h1>
+        <div class="search">
+            <input type="text" placeholder="Nickname GitHub" id="input-profile">
+            <button type="submit" id="searchP">Pesquisar</button>
+        </div>
+        
+    </header>
+    <main>
+        <div class="card-border">
+        <div class="card">
+            <div class="card-top">
+                <img src="../public/images/logo.svg" alt="logo">
+                <h2><%= usuario.nome %></h2>
+            </div>
+            <div class="card-mid">
+                <ul>
+                    <li><img src="../public/images/followers.svg" alt="">
+                        <p> <%= usuario.followers %> Seguidores</p>
+                    </li>
+                    <li><img src="../public/images/following.svg" alt="">
+                        <p> <%= usuario.following %> Seguindo</p>
+                    </li>
+                    <li><img src="../public/images/repository.svg" alt="">
+                        <p> <%= usuario.repos %> Repositórios</p>
+                    </li>
+                    <li><img src="../public/images/company.svg" alt="">
+                        <p><%= usuario.company %></p>
+                    </li>
+                    <li><img src="../public/images/location.svg" alt="">
+                        <p><%= usuario.location %></p>
+                    </li>
+                </ul>
+                <img src="<%= usuario.imagem %>" alt="" class="img-profile">
+            </div>
+            <div class="card-bottom">
+                <img src="../public/images/logo.svg" alt="" >
+                <p>ROCKETCARD</p>
+            </div>
+        </div>
+    </div>
+        <div class="custom">
+            <p>Customizar RocketCard</p>
+            <button id="genNew" class="genNew" type="button">Gerar background</button>
+        </div>
+    </main>
+    
+    <script src="../js/generatecolor.js"></script>
+   
+</body>
+
+</html>
